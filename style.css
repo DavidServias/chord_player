@@ -1,0 +1,86 @@
+:root {
+  --two-group-offset: 34px;
+  --three-group-offset: 96px;
+  --margin: 2px;
+  --key_width: 60px;
+  --key_height: 60px;
+  --keys_container_width: 448px;
+  --buttons_container_width: 440px;
+  --button_width:110px;
+}
+
+body {
+  background-color:pink;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#keys_container {
+  margin: auto;
+  width: var(--keys_container_width);
+}
+.key {
+  box-sizing: border-box;
+  padding: 0px;
+  position: relative;
+  border: none;
+  margin: var(--margin);
+  width: var(--key_width);
+  height: var(--key_height);
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+.flats .key {
+  left: var(--two-group-offset);
+  background-color:black;
+  color: white;
+}
+
+#gb, #ab, #bb {
+  left: var(--three-group-offset);
+}
+
+.naturals .key {
+  background-color:white;
+  color: black;
+}
+
+.key:hover{
+  background-color:grey;
+  cursor: pointer;
+}
+
+.quality {
+  background-color: skyBlue;
+  color:white;
+}
+
+#major {
+  background-color: darkBlue;
+}
+
+#buttons_container {
+  width:var(--buttons_container_width);
+  margin:auto;
+}
+
+.quality {
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0px;
+    padding:0px;
+    height: 2em;
+    width: var(--button_width);
+}
+
+.chord {
+  color:black;
+}
+
+#current_chord {
+  color:blue;
+}

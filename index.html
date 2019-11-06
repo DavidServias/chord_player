@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Title of the document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div id="keys_container">
+  <h1>Easy Chord Player</h1>
+  <h2>Click a note to play the chord.</h2>
+  <h2>Use the buttons to change the chord quality.</h2>
+  <div class="flats"></div>
+  <div class="naturals"></div>
+  <div id="buttons_container">
+    <button class="quality" id="major">1. Major</button><!--
+ --><button class="quality" id="minor">2. Minor</button><!--
+ --><button class="quality" id="dom7">3. Dom7th</button><!--
+ --><button class="quality" id="dim">4. Diminished</button>
+  </div>
+
+<button id="add_chord">add chord</button>
+<button id="remove_last">remove last</button>
+
+<div id="progression"></div>
+</div>
+</body>
+
+<script src="recitative.js"></script>
