@@ -1,46 +1,65 @@
 :root {
-  --two-group-offset: 34px;
-  --three-group-offset: 96px;
-  --margin: 2px;
-  --key_width: 60px;
   --key_height: 60px;
   --keys_container_width: 448px;
   --buttons_container_width: 440px;
   --button_width:110px;
 }
 
-body {
-  background-color:pink;
+* {
+  box-sizing: border-box;
 }
 
-h1, h2 {
-  text-align: center;
+html {
+  height:100%;
+}
+
+body {
+  box-sizing: border-box;
+  width:100%;
+  height:100%;
+  background-color: skyBlue;
+
+}
+
+#app_container {
+  height:100%;
 }
 
 #keys_container {
-  margin: auto;
-  width: var(--keys_container_width);
+  box-sizing: border-box;
+
 }
+
 .key {
   box-sizing: border-box;
   padding: 0px;
   position: relative;
   border: none;
-  margin: var(--margin);
-  width: var(--key_width);
+  margin: 1%;
+  width:12%;
   height: var(--key_height);
-  border-radius: 50%;
   cursor:pointer;
 }
 
+#b {
+  margin-left: :1%;
+  margin-right: 0px;
+}
+
+#c {
+  background-color: green;
+  margin-left: :0px;
+  margin-right: 1%;
+}
+
 .flats .key {
-  left: var(--two-group-offset);
+  transform: translate(52%);
   background-color:black;
   color: white;
 }
 
 #gb, #ab, #bb {
-  left: var(--three-group-offset);
+  transform: translate(154%);
 }
 
 .naturals .key {
@@ -53,34 +72,55 @@ h1, h2 {
   cursor: pointer;
 }
 
+#settings_container, #edit_progression_buttons, #arrow_container {
+  width:100%;
+}
+
+.edit  {
+  width: 27%;
+  margin: 2%;
+}
+
 .quality {
-  background-color: skyBlue;
+  margin:1%;
+}
+
+.active_quality {
+  background-color: darkGreen;
+}
+
+.active_quality:hover {
+  background-color: darkGreen;
+}
+
+#progression {
+  min-height: 18%;
+  border:black 2px solid;
+}
+
+#prog {
   color:white;
-}
-
-#major {
-  background-color: darkBlue;
-}
-
-#buttons_container {
-  width:var(--buttons_container_width);
-  margin:auto;
-}
-
-.quality {
-    box-sizing: border-box;
-    font-size: 16px;
-    line-height: 22px;
-    margin: 0px;
-    padding:0px;
-    height: 2em;
-    width: var(--button_width);
+  background-color: #007bff;
+  font-size: 1em;
 }
 
 .chord {
-  color:black;
+  color:white;
+  background-color: gray;
+  width: 60px;
+  margin:2px;
+  /* font-size: 20px; */
 }
 
 #current_chord {
   color:blue;
+}
+
+.arrow  {
+  margin: 5px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
 }

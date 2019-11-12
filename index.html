@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Title of the document</title>
+  <title>Chord Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/1916c14054.js" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -11,25 +14,42 @@
 </head>
 
 <body>
+  <div class="container" id = "app_container">
+    <div class="row justify-content-md-center">
+      <h1 id="#app_title" class = "col-sm-12 text-center">Easy Chord Player</h1>
+    </div>
+    <div class = "row" id="keys_container">
+      <div class="col-sm-12 flats"></div>
+      <div class="naturals col-sm-12"></div>
+    </div>
+  <div class="row">
+    <div id = "settings_container" class="btn-group col-sm">
+      <button type="button" class="btn btn-success quality active_quality" id = "maj">1. Major</button>
+      <button type="button" class="btn btn-success quality" id = "min">2. Minor</button>
+      <button type="button" class="btn btn-success quality" id = "7">3. Dom. 7th</button>
+      <button type="button" class="btn btn-success quality" id = "o">4. Dim.</button>
+    </div>
+  </div>
+  <div class = "row">
+    <div id = "edit_progression_buttons" class="btn-group btn-group-md">
+      <button type="button" class="btn btn-primary edit" id="play_chord">Play</button>
+      <button type="button" class="btn btn-primary edit" id ="add_chord">Add</button>
+      <button type="button" class="btn btn-primary edit" id = "remove_last">Remove</button>
+    </div>
+  </div>
+  <div id="progression" class="row justify-content-md-center"><h1 id="prog" class="col-sm-12 text-center">Progression:</h1></div>
 
-<div id="keys_container">
-  <h1>Easy Chord Player</h1>
-  <h2>Click a note to play the chord.</h2>
-  <h2>Use the buttons to change the chord quality.</h2>
-  <div class="flats"></div>
-  <div class="naturals"></div>
-  <div id="buttons_container">
-    <button class="quality" id="major">1. Major</button><!--
- --><button class="quality" id="minor">2. Minor</button><!--
- --><button class="quality" id="dom7">3. Dom7th</button><!--
- --><button class="quality" id="dim">4. Diminished</button>
+  <div class = "row justify-content-md-center">
+    <div id = "arrow_container" class="col-sm-6 btn-group btn-group-md">
+      <button type="button" class="btn btn-primary arrow" id ="down_arrow">current <i class='fas fa-arrow-down'></i></button>
+      <button type="button" class="btn btn-primary arrow" id="left_arrow">
+        <i class='fas fa-arrow-left'></i> previous</button>
+      <button type="button" class="btn btn-primary arrow" id ="right_arrow">next <i class='fas fa-arrow-right'></i></button>
+
+    </div>
   </div>
 
-<button id="add_chord">add chord</button>
-<button id="remove_last">remove last</button>
-
-<div id="progression"></div>
 </div>
-</body>
 
 <script src="recitative.js"></script>
+</body>
